@@ -1,0 +1,247 @@
+{
+  "start": 1,
+  "end": 23,
+  "imagecount": 16,
+  "images": [
+    {
+      "timestamp": 1,
+      "rowcount": 2,
+      "colcount": 2,
+      "rows": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "timestamp": 3,
+      "rowcount": 2,
+      "colcount": 2,
+      "rows": [
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "timestamp": 4,
+      "rowcount": 2,
+      "colcount": 2,
+      "rows": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "timestamp": 5,
+      "rowcount": 2,
+      "colcount": 2,
+      "rows": [
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "timestamp": 7,
+      "rowcount": 2,
+      "colcount": 2,
+      "rows": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "timestamp": 9,
+      "rowcount": 2,
+      "colcount": 2,
+      "rows": [
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "timestamp": 10,
+      "rowcount": 2,
+      "colcount": 2,
+      "rows": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "timestamp": 11,
+      "rowcount": 2,
+      "colcount": 2,
+      "rows": [
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "timestamp": 13,
+      "rowcount": 2,
+      "colcount": 2,
+      "rows": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "timestamp": 15,
+      "rowcount": 2,
+      "colcount": 2,
+      "rows": [
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "timestamp": 16,
+      "rowcount": 2,
+      "colcount": 2,
+      "rows": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "timestamp": 17,
+      "rowcount": 2,
+      "colcount": 2,
+      "rows": [
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "timestamp": 19,
+      "rowcount": 2,
+      "colcount": 2,
+      "rows": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "timestamp": 21,
+      "rowcount": 2,
+      "colcount": 2,
+      "rows": [
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "timestamp": 22,
+      "rowcount": 2,
+      "colcount": 2,
+      "rows": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "timestamp": 23,
+      "rowcount": 2,
+      "colcount": 2,
+      "rows": [
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ]
+    }
+  ]
+}

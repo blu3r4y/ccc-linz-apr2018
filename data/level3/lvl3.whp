@@ -1,0 +1,5 @@
+$start $end $imagecount
+$image{$imagecount}
+
+$$image = $timestamp $rowcount $colcount $row{$rowcount}
+$$row = $intensity{$colcount}

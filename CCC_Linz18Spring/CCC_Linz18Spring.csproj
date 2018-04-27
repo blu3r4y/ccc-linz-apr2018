@@ -66,6 +66,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Asteroid.cs" />
+    <Compile Include="AsteroidIdentifier.cs" />
     <Compile Include="Image.cs" />
     <Compile Include="Input.cs" />
     <Compile Include="Program.cs" />

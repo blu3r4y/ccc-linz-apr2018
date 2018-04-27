@@ -16,15 +16,15 @@ namespace CCC_Linz18Spring
     {
         public static void Main(string[] args)
         {
-            const int level = 3;
-            for (var i = 0; i <= 5; i++)
+            const int level = 4;
+            for (var i = 0; i <= 7; i++)
             {
                 var obj = JsonConvert.DeserializeObject<Input>(
                     File.ReadAllText($"C:\\data\\Dropbox\\Projekte\\Code\\CCC_Linz18Spring\\data\\level{level}\\lvl{level}-{i}.json"));
                 string solved = SolveLevel(obj);
                 Console.WriteLine(solved);
                 Console.WriteLine("Success on " + i);
-                File.WriteAllText($"C:\\data\\Dropbox\\Projekte\\Code\\CCC_Linz18Spring\\data\\level{level}\\solution-{i}.txt", solved);
+                File.WriteAllText($"C:\\data\\Dropbox\\Projekte\\Code\\CCC_Linz18Spring\\data\\level{level}\\solved-lvl{level}-{i}.txt", solved);
             }
         }
 
@@ -90,11 +90,36 @@ namespace CCC_Linz18Spring
 
         private static List<int> IsPeriodValid(Asteroid asteroid, Dictionary<int, Asteroid> asteroids, int start, int end, int period)
         {
+            Asteroid pre = null;
+            int? expectedK = null;
             start = GetStartPeriod(start, asteroid.Image.timestamp, period);
             for (int i = start; i <= end; i += period)
             {
                 if (!asteroids.ContainsKey(i))
                     return null;
+
+                Asteroid curr = asteroids[i];
+                if (pre != null)
+                {
+                    if (!expectedK.HasValue)
+                    {
+                        // rotation yet unkown
+                        if (Asteroid.EqualShapeMatrix(curr.Matrix, pre.Rotate90(0))) expectedK = 0;
+                        else if (Asteroid.EqualShapeMatrix(curr.Matrix, pre.Rotate90(1))) expectedK = 1;
+                        else if (Asteroid.EqualShapeMatrix(curr.Matrix, pre.Rotate90(2))) expectedK = 2;
+                        else if (Asteroid.EqualShapeMatrix(curr.Matrix, pre.Rotate90(3))) expectedK = 3;
+                        else throw new Exception("rotation not cycling ... wtf");
+                    }
+                    else
+                    {
+                        // rotation pattern known
+                        if (!Asteroid.EqualShapeMatrix(curr.Matrix, pre.Rotate90(expectedK.Value)))
+                            return null;
+                    }
+                }
+                
+                // first occurence, store previous asteroid
+                pre = curr;
             }
 
             // remove them
@@ -148,20 +173,6 @@ namespace CCC_Linz18Spring
             LastSeen = lastSeen;
             Count = count;
             Period = period;
-        }
-
-        public bool AddObservation(Asteroid other, bool skipShape = false)
-        {
-            if (Asteroid.EqualShape(other) || skipShape)
-            {
-                Count++;
-                if (other.Image.timestamp > LastSeen)
-                    LastSeen = other.Image.timestamp;
-
-                return true;
-            }
-
-            return false;
         }
 
         public new string ToString()
